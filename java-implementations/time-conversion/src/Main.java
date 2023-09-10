@@ -16,7 +16,7 @@ public class Main {
 
     //Getting the result using DateTimeFormatter
     public static String convertTime(String s) throws ParseException {
-        if (s == null || s.isEmpty()) {
+        if (s != null && !s.isEmpty()) {
             DateTimeFormatter inputFormatter = DateTimeFormatter.ofPattern("hh:mm:ssa");
             DateTimeFormatter outputFormatter = DateTimeFormatter.ofPattern("HH:mm:ss");
             LocalTime time = LocalTime.parse(s, inputFormatter);
